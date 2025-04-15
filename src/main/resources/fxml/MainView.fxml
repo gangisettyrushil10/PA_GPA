@@ -1,1 +1,43 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.austincollege.pagpa.controller.MainController"
+      stylesheets="@../css/styles.css"
+      styleClass="main-container">
+    
+    <!-- Header Bar -->
+    <HBox styleClass="header-bar">
+        <Label text="AUSTIN COLLEGE PHYSICIAN ASSISTANT PROGRAM" 
+               styleClass="header-text"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <ImageView fitHeight="24.0" fitWidth="24.0" 
+                   styleClass="profile-icon"
+                   preserveRatio="true">
+            <HBox.margin>
+                <Insets right="10"/>
+            </HBox.margin>
+            <Image url="@../images/profile-icon.png"/>
+        </ImageView>
+    </HBox>
+
+    <!-- Main Content Area with All Students Button -->
+    <VBox VBox.vgrow="ALWAYS" alignment="BOTTOM_CENTER">
+        <Button styleClass="all-students-button" contentDisplay="TOP">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
+                    <Image url="@../images/all-students-button.png"/>
+                </ImageView>
+            </graphic>
+            <VBox.margin>
+                <Insets bottom="50"/>
+            </VBox.margin>
+            <text>ALL STUDENTS</text>
+        </Button>
+    </VBox>
+</VBox> 
