@@ -1,0 +1,45 @@
+/* Main container */
+.main-container {
+    -fx-background-color: black;
+}
+
+/* Header bar */
+.header-bar {
+    -fx-background-color: #4a1111;
+    -fx-padding: 8 15 8 15;
+    -fx-alignment: center-left;
+    -fx-min-height: 40;
+    -fx-max-height: 40;
+}
+
+.header-text {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFD700;
+}
+
+.profile-icon {
+    -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.3), 10, 0, 0, 0);
+}
+
+/* All Students button */
+.all-students-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFD700;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 15px;
+    -fx-content-display: top;
+    -fx-alignment: center;
+}
+
+.all-students-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255,215,0,0.5), 10, 0, 0, 0);
+    -fx-text-fill: #FFD700;
+}
+
+.all-students-button .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(255,215,0,0.3), 5, 0, 0, 0);
+} 
