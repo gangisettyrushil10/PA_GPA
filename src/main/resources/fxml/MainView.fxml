@@ -27,7 +27,7 @@
 
     <!-- Main Content Area with All Students Button -->
     <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
-      <PieChart fx:id="pieChart" stylesheets="@../css/styles.css">
+      <PieChart fx:id="pieChart" prefHeight="611.0" prefWidth="585.0" stylesheets="@../css/styles.css" title="Overall Tracker">
          <effect>
             <Blend />
          </effect></PieChart>
