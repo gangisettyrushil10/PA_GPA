@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/17"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="main.MainController"
-      stylesheets="@../css/styles.css"
-      styleClass="main-container">
+<VBox styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
     
     <!-- Header Bar -->
     <HBox styleClass="header-bar">
-        <Label text="AUSTIN COLLEGE PHYSICIAN ASSISTANT PROGRAM" 
-               styleClass="header-text"/>
-        <Region HBox.hgrow="ALWAYS"/>
-        <ImageView fitHeight="24.0" fitWidth="24.0" 
-                   styleClass="profile-icon"
-                   preserveRatio="true">
+        <Label styleClass="header-text" text="AUSTIN COLLEGE PHYSICIAN ASSISTANT PROGRAM" />
+        <Region HBox.hgrow="ALWAYS" />
+        <ImageView fitHeight="24.0" fitWidth="24.0" preserveRatio="true" styleClass="profile-icon">
             <HBox.margin>
-                <Insets right="10"/>
+                <Insets right="10" />
             </HBox.margin>
-            <Image url="@../images/profile-icon.png"/>
+            <Image url="@../images/profile-icon.png" />
         </ImageView>
     </HBox>
 
     <!-- Main Content Area with All Students Button -->
-    <VBox VBox.vgrow="ALWAYS" alignment="BOTTOM_CENTER">
-        <Button styleClass="all-students-button" contentDisplay="TOP">
-            <graphic>
-                <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
-                    <Image url="@../images/all-students-button.png"/>
-                </ImageView>
-            </graphic>
+    <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+      <PieChart fx:id="pieChart" stylesheets="@../css/styles.css">
+         <effect>
+            <Blend />
+         </effect></PieChart>
+        <Button contentDisplay="TOP" prefHeight="0.0" prefWidth="180.0" styleClass="all-students-button">
             <VBox.margin>
-                <Insets bottom="50"/>
+                <Insets bottom="50" />
             </VBox.margin>
             <text>ALL STUDENTS</text>
         </Button>
     </VBox>
-</VBox> 
+</VBox>
